@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="header">
+    <h1>Weather app</h1>
+
+    <hr>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="city" name="city">Where do you live?</label>
+
+        <div>
+            <input type="text" name="city" id="city" placeholder="Enter your city...">
+            <button type="submit">Find</button>
+        </div>
+    </form>
+</section>
+
+<section class="current_weather">
+    {% if current_weather %}
+    <h1>What's the weather like in <span style="text-transform: capitalize;">{{ current_weather.city }}</span>?</h1>
+
+    <div class="weather_info">
+        <p>{{ current_weather.date }}</p>
+
+        <div>
+            <img src="https://openweathermap.org/img/wn/{{ current_weather.icon }}.png" alt="icon">
+            <p>{{ current_weather.temperature }}&deg;C - {{ current_weather.humidity }}%</p>
+        </div>
+
+        <p style="text-transform: capitalize;">{{ current_weather.description }}</p>
+        <p>{{ current_weather.min_temp }} / {{ current_weather.max_temp }}&deg;C</p>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

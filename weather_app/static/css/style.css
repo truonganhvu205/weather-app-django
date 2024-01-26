@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header h1 {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+
+.header form, .current_weather {
+    margin: 1rem;
+}
+
+.header form label {
+    display:block;
+    font-weight: 900;
+    font-size: larger;
+    margin-bottom: 0.5rem;
+}
+
+.header form div {
+    display: flex;
+}
+
+.header form input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 0.5rem 0 0 0.5rem;
+    border: none;
+    font-size: large;
+}
+
+.header form button {
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: large;
+    border-radius: 0 0.5rem 0.5rem 0;
+    border: none;
+    border-left: 1px #333 solid;
+}
+
+.header form button:hover {
+    cursor: pointer;
+}
+
+.current_weather h1 {
+    font-size: larger;
+    margin: 2rem 0 1rem 0;
+}
+
+.current_weather .weather_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: fit-content;
+    margin: auto;
+}
+
+.current_weather .weather_info p:nth-child(1){
+    margin-bottom: 1rem;
+}
+
+.current_weather .weather_info div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.current_weather .weather_info div img {
+    min-width: 4rem;
+    margin-right: 0.5rem;
+}
+
+.current_weather .weather_info p:nth-child(3) {
+    margin-bottom: 1rem;
+}
